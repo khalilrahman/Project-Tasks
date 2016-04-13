@@ -1,0 +1,20 @@
+<.> Setup git and circleCI
+<.> Fork the branch
+<.> Connect circleCI and run test
+<.> Check results
+<.> Read circleCI manuals
+<.> Create Circle.yml file.
+<.> Add following information save the same.
+<.> User's test does not reproduce any artifacts
+and 
+test:
+ post:
+   - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+   - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+
+gives no result.
+
+<.> For an Artifacts, we will update existing pom.xml file and remove three consecutive line from the same file.
+
+<.> Buil it again.
+ 
