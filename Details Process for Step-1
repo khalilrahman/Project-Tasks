@@ -16,5 +16,9 @@ gives no result.
 
 <.> For an Artifacts, we will update existing pom.xml file and remove three consecutive line from the same file.
 
+   <configuration>
+					<skip>true</skip>
+	  </configuration>
+
 <.> Buil it again.
  
