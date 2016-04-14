@@ -1,9 +1,9 @@
 <.> Fork the branch from shared link
-<.> run test by circleci
-<.> it takes too time to finished and showing "Timed Out"
-<.> Check some parameter changes
-<.> there is some strange for 72000 + wait(1000) - try to speed up
-<.> looks like the method is called many times. 
+<.> Run test by circleci
+<.> It takes too time to finished and showing "Timed Out"
+<.> Check some parameter changes on src/main/java/org/apache/commons/csv/CSVFormat.java file.
+<.> There is some strange for 72000 + wait(1000) - try to speed up
+<.> Looks like the method is time consumer,
 <.> I don't see logic in this code.
 private void validate() throws IllegalArgumentException {
         for (int i=0; i<20*60*60; i++) {
@@ -14,4 +14,4 @@ private void validate() throws IllegalArgumentException {
                 break;
             }
         }
-8) works without above code.
+<.> After modification, i=200 and sleep(1) Project run successfully.
